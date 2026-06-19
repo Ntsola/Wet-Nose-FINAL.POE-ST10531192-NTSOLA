@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css_assets/mystyle.css">
+  <meta name="description" content="Submit an enquiry to Wetnose Animal Rescue Centre about adoption, volunteering, or sponsorship. Detailed form with quick response.">
+  <title>Enquiry Form | Get Involved with Wetnose Animal Rescue</title>
+</head>
+<script src="JS/main.js" defer></script>
+<body>
+
+  <!-- NAVBAR -->
+ <header class="site-header">
+  <h1>Wet Nose Animal Rescue Centre</h1>
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="contact.html" class="active">Contact Us</a>
+    <a href="enquiry.html" class="active">Enquiry</a>
+  </nav>
+</header>
+
+
+    <!-- Header / Nav - same as other pages for consistency -->
+    <header class="site-header">
+        <div class="logo" div class="brand-banner">
+  <img src="images/enquiry form.png" alt="Wetnose Animal Rescue Centre Logo">
+  <div class="brand-message">
+    <h3>Benoni's Only 24/7 Rescue Hotline</h3>
+    <p>500+ Animals Saved • No Animal Turned Away • 100% Volunteer Run</p>
+  </div>
+
+        <nav class="main-nav">
+    </header>
+
+  <main class="container" style="margin-top:100px;">
+
+    <!-- ENQUIRY FORM -->
+<section class="form-container" style="margin-top:30px;">
+  <form id="enquiry-form" action="#" method="post" netlify novalidate>
+    
+    <!-- FULL NAME -->
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required minlength="2">
+
+    <!-- EMAIL -->
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required>
+
+    <!-- CONTACT NUMBER -->
+    <label for="phone">Contact Number *</label>
+    <input type="tel" id="phone" name="phone" placeholder="0821234567" required>
+
+    <label for="address">Physical Address:</label>
+    <input type="text" id="address" name="address">
+
+    <!-- ENQUIRY TYPE - ID changed to "service" for JS -->
+    <label for="service">I am enquiring about: *</label>
+    <select id="service" name="service" required>
+      <option value="">-- Please select --</option>
+      <option value="adopt">Adoption</option>
+      <option value="volunteer">Volunteering</option>
+      <option value="sponsor">Sponsorship</option>
+      <option value="other">Other</option>
+    </select>
+
+    <!-- CONDITIONAL FIELDS - These IDs match my JS -->
+    <div id="adopt-fields" style="display:none; margin-top:15px;">
+      <label for="animal-interest">Which animal are you interested in?</label>
+      <input type="text" id="animal-interest" name="animal-interest" placeholder="e.g. Snowy – Jack Russell">
+    </div>
+
+    <div id="volunteer-fields" style="display:none; margin-top:15px;">
+      <fieldset style="border:none; padding:0;">
+        <legend style="font-weight:600; margin-bottom:10px;">Availability</legend>
+        <input type="checkbox" id="weekdays" name="availability" value="weekdays">
+        <label for="weekdays">Weekdays</label><br>
+        <input type="checkbox" id="weekends" name="availability" value="weekends">
+        <label for="weekends">Weekends</label><br>
+        <input type="checkbox" id="mornings" name="availability" value="mornings">
+        <label for="mornings">Mornings</label><br>
+        <input type="checkbox" id="afternoons" name="availability" value="afternoons">
+        <label for="afternoons">Afternoons</label>
+      </fieldset>
+    </div>
+
+    <div id="sponsor-fields" style="display:none; margin-top:15px;">
+      <label for="sponsorship-type">Sponsorship type</label>
+      <select id="sponsorship-type" name="sponsorship-type">
+        <option value="">-- Please select --</option>
+        <option value="monthly">Monthly Sponsorship</option>
+        <option value="once-off">Once-off Donation</option>
+        <option value="food">Food Sponsorship</option>
+        <option value="medical">Medical Sponsorship</option>
+      </select>
+    </div>
+
+    <!-- MESSAGE -->
+    <label for="message">Your Message *</label>
+    <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Tell us more..."></textarea>
+
+    <!-- POPIA CONSENT -->
+    <div style="margin:25px 0; display:flex; align-items:flex-start; gap:10px;">
+      <input type="checkbox" id="popia-consent" name="popia-consent" required style="margin-top:4px;">
+      <label for="popia-consent" style="margin:0; font-weight:normal;">
+        I consent that Wetnose may contact me regarding my enquiry and agree to the terms. *
+      </label>
+    </div>
+
+    <button type="submit" class="btn-lg">Submit Enquiry</button>
+  </form>
+</section>
+
+    <div class="what-next">
+    <h3>What Happens Next?</h3>
+    <ul>
+      <li>✓ We review your enquiry within 48 hours</li>
+      <li>✓ A staff member will contact you via email or phone</li>
+      <li>✓ For adoptions, we'll arrange a meet and greet</li>
+      <li>✓ All information is kept confidential</li>
+    </ul>
+  </div>
+</div>
+    
+  
+
+  </main>
+
+<footer>
+    <p>Wetnose Animal Rescue Centre | NPO 033-447 | Bronkhorstspruit, Pretoria</p>
+    <p>
+      <a href="contact.html">Contact Us</a> | 
+      <a href="enquiry.html">Enquire Now</a>
+    </p>
+  </footer>
+
+  <script src="JS/main.js" defer></script>
+</body>
+</html>
