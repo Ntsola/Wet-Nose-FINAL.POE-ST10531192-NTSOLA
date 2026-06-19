@@ -1,0 +1,2516 @@
+/*----body----*/
+body{
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #a04444;
+  margin: 0;
+  padding: 0;
+}
+
+/*----links----*/
+a{
+  text-decoration: none;
+  color: plum;
+}
+a:hover {
+  color: lightskyblue;
+}
+
+
+/*----home----*/
+.homepage {
+  background-image: url("hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-top: 80px;
+}
+
+/* ---- about ---- */
+.about-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* lets items drop to next line on small screens */
+    gap: 10px;
+    margin: 40px auto;
+    width: 90%;       /* changed from 30% to match services page */
+    max-width: 1200px;
+}
+
+.about-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.about-grid > div {
+    flex: 1 1 200px; /* each card is min 300px wide, then grows */
+    background: white;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 6x;
+    box-sizing: border-box;
+}
+/*----services----*/
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1200px;
+}
+
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: lightblue;
+}
+
+
+/* Orange header bar */
+.osahan-main-nav {
+    background: darkgray;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+
+.osahan-main-nav h1 {
+    color: white;
+    margin: 0 0 20px 0;
+    font-size: 1.5rem;
+}
+
+/* Make nav horizontal */
+.main-nav > ul {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-nav > ul > li > a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.95rem !important;
+}
+
+.main-nav > ul > li > a:hover {
+    color: lightskyblue !important;
+}
+
+/* Hide the checkbox and make dropdown work on hover */
+.dropdown-toggle {
+    display: none !important;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: #333 !important;
+    padding: 10px 20px;
+    display: block;
+    text-transform: none !important;
+}
+
+.dropdown-menu li a:hover {
+    background: #f5f5f5;
+    color: orangered !important;
+}
+
+/*----cards----*/
+.card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/*----image-zoom----*/
+.zoom_img:hover img{
+  transform: scale(1.1);
+}
+
+/*----buttons----*/
+.btn-lg {
+  padding: 11px 28px;
+  font-size: 18px;
+  font-weight: 500;
+  background: palevioletred ;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-lg:hover {
+  background: #f54a01;
+}
+
+/*----contact----*/
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #f9f9f9;
+  border-radius: 8px;
+}
+form input,
+form textarea {
+  width: 100%;
+  padding-top: 20px;
+  margin-bottom: 15px;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/*----enquiry----*/
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/*----tablet----*/
+@media (max-width: 1024px) {
+  .services-grid,
+  .about-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/*----mobile----*/
+@media (max-width: 768px) {
+  .services-grid,
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .pets-nav a.nav-link {
+    padding: 15px !important;
+    text-align: center;
+  }
+  
+}
+/*---test---*/
+body {
+  background-color: palevioletred;
+}
+
+.map-square {
+  width: 100%;
+  max-width: 400px; /* change this to make it bigger/smaller */
+  aspect-ratio: 1 / 1; /* this makes it square */
+  margin: 25px auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-square iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.contact-square {
+  width: 100%;
+  max-width: 400px; 
+  aspect-ratio: 1 / 1; /* makes it square */
+  margin: 25px auto;
+  background-color: #fff8f3;
+  border-left: 5px solid pink;
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers text vertically */
+  text-align: center; /* centers text horizontally */
+}
+
+.location-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: 30px;
+}
+
+/* Make each location a square */
+.contact-info {
+  width: 400px;
+  aspect-ratio: 1 / 1; /* makes it square */
+  background-color: #fff8f3;
+  border-left: 5px solid #ff8c42;
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  
+  /* center content inside */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-info h3 {
+  margin-top: 0;
+  color: #d35400;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Stack on mobile */
+@media (max-width: 768px) {
+  .location-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  margin-top: 15px;
+  padding-top: 0;
+}
+
+.social-card {
+  background: #fff8f3;
+  border: 2px solid #ff8c42;
+  border-radius: 20px;
+  padding: 30px;
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(255, 140, 66, 0.2);
+}
+
+.social-card h3 {
+  color: #d35400;
+  margin-top: 0;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.social-btn {
+  display: block;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.social-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/*  Social media colors */
+.facebook  { background: #ffcb05; color: #333; }
+.twitter   { background: #4fc3f7; }
+.youtube   { background: #ff5252; }
+.instagram { background: #f48fb1; }
+.tiktok    { background: #5c6bc0; }
+ .contact-card {
+    background: #fff;
+    padding: 20px;
+    border-left: 4px solid #ff8c00;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.social-icons img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a:hover img {
+    transform: scale(1.15);
+}
+
+
+
+
+.contact-card::after {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  font-size: 22px;
+  opacity: 0.25;
+}
+
+.contact-card {
+  background: #fff8f3;
+  border-left: 5px solid #ff8c42;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 3px 10px rgba(255, 140, 66, 0.15);
+  transition: transform 0.2s;
+  position: relative; /* needed for paw positioning */
+  overflow: hidden;
+}
+
+
+
+/* Underline using ::after pseudo-element */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 4px;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+nav a:hover::after {
+  width: 70%; /* underline expands on hover */
+}
+
+/* Optional: active page underline stays visible */
+nav a.active::after {
+  width: 70%;
+}
+/* Nav links base style */
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  margin: 0 5px;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Underline using ::after pseudo-element */
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 4px;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover pseudo-class */
+nav a:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+nav a:hover::after {
+  width: 70%;
+}
+
+/* Focus pseudo-class - for keyboard/tab navigation */
+nav a:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+nav a:focus::after {
+  width: 70%;
+}
+
+/* Active pseudo-class - when clicked */
+nav a:active {
+  transform: translateY(0px) scale(0.98);
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Header background */
+.osahan-main-nav {
+  background-color: #ff8c42;
+  padding-bottom: 15px;
+}
+
+
+
+/* Underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 4px;
+  left: 50%;
+  background-color: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+/* Hover pseudo-class */
+.nav-links li a:hover {
+  transform: translateY(-2px);
+}
+
+.nav-links li a:hover::after {
+  width: 70%;
+}
+
+/* Focus pseudo-class for keyboard users */
+.nav-links li a:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+/* Active pseudo-class for click effect */
+.nav-links li a:active {
+  transform: scale(0.98);
+}
+
+
+/* Corrected Navigation - Orange Header */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+
+/* Orange header bar */
+.osahan-main-nav {
+    background: #f97316; /* Orange background */
+    padding: 25px 0 40px 0;
+    text-align: center;
+}
+
+/* Site title */
+.osahan-main-nav h1 {
+    color: white;
+    margin: 0 0 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Nav links - horizontal and centered */
+.main-nav > ul {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px !important;
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Nav link text */
+.main-nav > ul > li > a {
+    color: white !important;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    padding: 5px 0;
+}
+
+/* Hover effect */
+.main-nav > ul > li > a:hover,
+.main-nav > ul > li > a.active {
+    text-decoration: underline !important;
+    text-underline-offset: 4px;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: #333 !important;
+    padding: 10px 20px;
+    display: block;
+    text-decoration: none !important;
+    text-align: left;
+}
+
+.dropdown-menu li a:hover {
+    background: #f8f8f8;
+}
+
+/* Hide checkbox */
+.dropdown-toggle {
+    display: none !important;
+}
+
+/* Dog Cards Container */
+.dog-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 40px 60px;
+    background: #fafafa;
+}
+
+/* Individual Card */
+.dog-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.dog-card:hover {
+    transform: translateY(-5px);
+}
+
+.dog-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Card Info Section */
+.dog-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.dog-info h3 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    margin: 0 0 15px 0;
+    font-weight: 700;
+}
+
+.dog-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.dog-info li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.dog-info li:last-child {
+    border-bottom: none;
+}
+
+/* Pink Adopt Button */
+.adopt-btn {
+    display: block;
+    background: #ec4899; /* Pink */
+    color: white !important;
+    text-align: center;
+    padding: 12px;
+    border-radius: 25px;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+.adopt-btn:hover {
+    background: #db2777;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+    .dog-cards {
+        grid-template-columns: 1fr;
+        padding: 30px 20px;
+    }
+}
+
+/* Make the adopt section visible */
+#adopt {
+    background: #fff;
+    padding: 40px 20px;
+    min-height: 600px;
+}
+
+#adopt h2, #adopt h3 {
+    color: #1f2937;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Animal cards - make them visible */
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.animal-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding: 0 0 20px 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Fix the image */
+.animal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    background: #f3f4f6;
+}
+
+/* Fix the text */
+.animal-card h4 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 15px 0 10px 0;
+}
+
+.animal-card p {
+    color: #374151;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 15px 15px 15px;
+    text-align: left;
+}
+
+.animal-card p strong {
+    color: #111827;
+}
+
+/* Adopt button */
+.adopt-btn {
+    display: inline-block;
+    background: #ec4899;
+    color: white !important;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none !important;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+}
+
+.adopt-btn:hover {
+    background: #db2777;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .animal-grid {
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+}
+.animal-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns = 3 animals in one line */
+    gap: 25px;
+    margin: 30px 60px;
+}
+
+.animal-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    padding-bottom: 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.animal-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.animal-card h4 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin: 15px 0 10px 0;
+}
+
+.animal-card p {
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    margin: 0 15px 15px 15px;
+}
+
+/* Make it stack on mobile */
+@media (max-width: 900px) {
+    .animal-grid {
+        grid-template-columns: 1fr;
+        margin: 30px 20px;
+    }
+}
+/* Put all cards in a grid/row like the animal cards */
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+    background: #f9fafb;
+}
+
+/* Style each card like an animal card */
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    width: 300px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+/* Heading inside card */
+.card h3 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 0 0 12px 0;
+}
+
+/* Main description text */
+.card p {
+    color: #374151;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+/* Contact info at the bottom */
+.contact-info {
+    background: #f3f4f6;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    color: #1f2937;
+    line-height: 1.8;
+}
+
+.contact-info strong {
+    color: #111827;
+}
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 25px;
+    padding: 20px 0;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    width: 300px;
+    padding: 25px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.card h3 {
+    color: #00a8e8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    margin: 0 0 12px 0;
+}
+
+.card p {
+    color: #374151;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.contact-info {
+    background: #f3f4f6;
+    border-radius: 6px;
+    padding: 12px;
+    font-size: 14px;
+    color: #1f2937;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* 1. Smooth background + font */
+body {
+    background: linear-gradient(180deg, pink 0%, #f5f7fa 100%);
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+/* 2. Make header pop with gradient + shadow */
+header, .header, div[style*="background"] {
+    background: linear-gradient(90deg, #ff7e5f 0%, #ff6a00 100%) !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 0 0 12px 12px;
+    padding: 25px 0 !important;
+    text-align: center;
+}
+
+header h1, .header h1 {
+    color: white;
+    font-size: 32px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    text-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+
+/* 3. Style nav links */
+nav a, header a {
+    color: white !important;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+nav a:hover, header a:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+}
+
+/* 4. Section title styling */
+h2, h3 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-top: 40px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+h2::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #ff6a00;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+/* 5. Animal cards - add shadow, hover, rounded corners */
+.animal-card, .card, div:has(img) {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin: 20px;
+}
+
+.animal-card:hover, .card:hover, div:has(img):hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+.animal-card img, .card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff6a00;
+}
+
+/* 6. Animal names */
+.animal-card h4, .card h4, .card h3 {
+    color: #ff6a00;
+    text-align: center;
+    font-size: 20px;
+    margin: 15px 0 10px 0;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* 7. Text spacing */
+p {
+    color: #4a5568;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* 8. Container for cards - make them sit side by side */
+body > div, .container, .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 9. Subtle fade-in animation */
+.animal-card, .card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Match services page colors */
+body {
+    background-color: #f5f7fa;  /* light grey-blue background */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header bar */
+header, .header, h1:first-of-type {
+    background-color: #ff8c00;  /* orange */
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Nav links */
+nav a, ul a {
+    color: #ff8c00;  /* orange text */
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+nav a:hover, ul a:hover {
+    color: #cc7000;  /* darker orange on hover */
+}
+
+/* Form container */
+form, .enquiry-form {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button */
+button, input[type="submit"] {
+    background-color: #ff8c00;  /* orange button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover, input[type="submit"]:hover {
+    background-color: #cc7000;
+}
+
+/* Wrap all team cards in a container div */
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+/* Style each team member card */
+.team-card {
+    width: 260px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+}
+
+.info-cards {
+    display: flex;
+    flex-direction: row;  /* puts side by side */
+    gap: 20px;            /* space between cards */
+    justify-content: center;
+    align-items: stretch; /*  all cards same height */
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    flex-wrap: wrap;      /* lets them drop to next line on small screens */
+}
+
+.info-cards .card {
+    flex: 1 1 300px;      /* each card takes ~300px min, then grows */
+    background: #f8f7f4;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-cards .card h3 {
+    color: orangered;       /* orange/red color from your image */
+    margin-top: 0;
+}
+
+.enquiry-wrapper {
+    display: flex;
+    flex-direction: column;  /* Stack items vertically */
+    gap: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 5%;
+}
+
+.enquiry-form {
+    width: 100%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.what-next {
+    width: 100%;
+    background: #f8f7f4;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.what-next h3 {
+    color: #b33939;
+    font-family: 'Comic Sans MS', cursive;
+    margin-top: 0;
+}
+
+.what-next ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+}
+
+.what-next li {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* ===== About Page ===== */
+.about-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 5%;
+}
+
+.about-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.about-header h1 {
+    display: inline-block;
+    background: orangered;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 32px;
+    margin: 0;
+}
+
+.about-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+}
+
+.about-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mission-box, .team-box {
+    flex: 1 1 400px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.mission-box h2, .team-box h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+    border-bottom: 3px solid #ff4d4d;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.mission-content {
+    background: #f9f9f9;
+    border-left: 4px solid #ff8c00;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.mission-content h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+}
+
+.mission-content p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    background: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: background 0.2s ease;
+}
+
+.btn:hover {
+    background: #e67c00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+    }
+    
+    .about-intro {
+        font-size: 16px;
+    }
+}
+
+.team-wrapper {
+    display: flex;
+    flex-direction: column;  /* Stack cards vertically */
+    gap: 25px;               /* Space between cards */
+    max-width: 900%;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.team-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-card img {
+    max-width: 200%;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.team-card h3 {
+    color: #e94f9a; /* Pink/red heading color */
+    margin-top: 0;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    background: #ff4d4d;
+    padding: 15px 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    white-space: nowrap; /* stops "ABOUT US" from breaking */
+    padding: 8px 12px;
+}
+
+/* Dropdown example for "Service 1" */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    min-width: 140px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* ===== RESET + BASE MOBILE STYLES ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 100%;
+    padding: 20px 15px;
+    margin: 0 auto;
+}
+
+/* 1. NAV - Horizontal on all screens */
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    list-style: none;
+    background: #ff4d4d;
+    padding: 10px 5px;
+    overflow-x: auto;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 8px 6px;
+    flex-shrink: 0;
+}
+
+/* 2. HEADINGS */
+h1 { font-size: 22px; text-align: center; margin: 15px 0; }
+h2 { font-size: 18px; margin: 15px 0 10px; }
+
+/* 3. IMAGES - Always responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 4. CONTENT GRID - Single column by default */
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* 5. FOOTER */
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+    background: #333;
+    color: white;
+}
+
+/* ===== TABLET BREAKPOINT ===== */
+@media (min-width: 481px) and (max-width: 768px) {
+    
+    body { font-size: 16px; }
+    
+    .container { padding: 30px 25px; }
+    
+    /* Nav gets bigger */
+    header nav a {
+        font-size: 14px;
+        padding: 10px 10px;
+    }
+    
+    /* Headings bigger */
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    
+    /* Multi-column: 2 cards per row */
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        flex: 1 1 45%; /* 2 per row */
+    }
+}
+
+/* ===== DESKTOP BREAKPOINT ===== */
+@media (min-width: 769px) {
+    
+    body { font-size: 17px; }
+    
+    .container {
+        max-width: 1100px;
+        padding: 50px 40px;
+    }
+    
+    /* Nav with more space */
+    header nav {
+        justify-content: center;
+        gap: 30px;
+    }
+    
+    header nav a {
+        font-size: 16px;
+        padding: 12px 18px;
+    }
+    
+    /* Headings desktop size */
+    h1 { font-size: 34px; }
+    h2 { font-size: 26px; }
+    
+    /* Multi-column: 3 cards per row */
+    .grid {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        flex: 1 1 30%; /* 3 per row */
+    }
+}
+
+/* ===== SMALL PHONE: 320px - 480px ===== */
+@media (max-width: 480px) {
+    
+    /* 1. Force nav horizontal, no wrapping */
+    header nav {
+        display: flex;
+        flex-direction: row;      /* horizontal */
+        justify-content: flex-start; /* align left so scroll works */
+        gap: 0;
+        padding: 8px 5px;
+        background: #ff4d4d;
+        overflow-x: auto;         /* allow swipe scroll */
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    /* Hide scrollbar on mobile although keep scroll */
+    header nav::-webkit-scrollbar {
+        display: none;
+    }
+    
+    /* 2. Make links smaller so all 5 fit */
+    header nav a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        font-size: 11px;          /* smaller font */
+        font-weight: bold;
+        padding: 10px 8px;        /* less padding */
+        white-space: nowrap;      
+        flex-shrink: 0;           /* prevent squishing */
+    }
+    
+    /* 3. make header smallertext too */
+    header h1 {
+        font-size: 20px;
+        padding: 15px 10px;
+        text-align: center;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Stops spacing issues */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Nav - full width + centered content */
+header {
+    background: #ff8c00;
+    padding: 20px 0;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8%;
+    display: flex;
+    gap: 30px;
+}
+
+/* Hero - proper alignment */
+.hero {
+    display: flex;
+    align-items: center; /* fixed vertical alignment */
+    justify-content: space-between; /* fixed  horizontal spacing */
+    gap: 40px;
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards - consistent spacing */
+.info-cards {
+    display: flex;
+    gap: 30px; /* replaces meixed up margins */
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: -60px auto 0 auto; /* pulls cards up over hero */
+    flex-wrap: wrap;
+}
+.card {
+    flex: 1 1 300px; /* grows, shrinks, min 300px */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Mobile fix for responsive layout */
+@media (max-width: 768px) {
+    .hero, .info-cards {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero {
+        padding: 40px 5%;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Stops spacing issues */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Nav - full width + centered content */
+header {
+    background: #ff8c00;
+    padding: 20px 0;
+}
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 8%;
+    display: flex;
+    gap: 30px;
+}
+
+/* Hero - fixed  alignment */
+.hero {
+    display: flex;
+    align-items: center; /* fixes vertical alignment */
+    justify-content: space-between; /* fixes horizontal spacing */
+    gap: 40px;
+    padding: 80px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cards - consistent spacing */
+.info-cards {
+    display: flex;
+    gap: 30px; /* replaces messy margins */
+    padding: 60px 8%;
+    max-width: 1200px;
+    margin: -60px auto 0 auto; /* pulls cards up over hero */
+    flex-wrap: wrap;
+}
+.card {
+    flex: 1 1 300px; /* grows, shrinks, min 300px */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Mobile fix for responsive layout */
+@media (max-width: 768px) {
+    .hero, .info-cards {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero {
+        padding: 40px 5%;
+    }
+}
+
+
+/* Responsive typography system */
+h1 {
+    font-size: clamp(28px, 5vw, 48px); /* Min 28px, scales with screen, max 48px */
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(24px, 4vw, 36px);
+}
+
+h3 {
+    font-size: clamp(20px, 3vw, 24px);
+}
+
+p, label, input, textarea {
+    font-size: clamp(14px, 2.5vw, 18px); /* Body text shrinks on mobile */
+    line-height: 1.6;
+}
+
+nav a {
+    font-size: clamp(14px, 2vw, 16px);
+}
+
+/* Optional: tighten spacing on mobile too */
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        line-height: 1.3;
+        margin-bottom: 15px;
+    }
+    
+    p {
+        margin-bottom: 12px;
+    }
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 14px;
+    display: block;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.success-message {
+    background: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #c3e6cb;
+    font-weight: 500;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-img:hover { transform: scale(1.05); }
+
+
+/* Lightbox Background */
+.lightbox {
+  display: none; /* hidden until clicked */
+  position: fixed;
+  z-index: 1000; /* makes sure it’s on top of everything */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 182, 193, 0.95); /*  pink */
+  padding-top: 60px;
+}
+
+/* The big image in middle */
+.lightbox-content {
+  display: none;
+  margin: auto; /*  centers it */
+  max-width: 95%; /* of screen width */
+  max-height: 95%; /* of screen height */
+  border-radius: 10px;
+  box-shadow: 0 10px 20px palevioletred;
+}
+
+/* Close X button top right */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #ff1493; /* hot pink X */
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover {
+  color: palevioletred;
+}
+
+/* Caption text under image */
+#caption {
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  font-size: 20px;
+}
+
+.accordion {
+  background-color: #ff69b4;
+  color: white;
+  cursor: pointer;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  transition: 0.4s;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.accordion:hover { background-color: #ff1493; }
+
+.panel {
+  padding: 0 15px;
+  background-color: #fff0f5;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  border-radius: 0 0 5px 5px;
+}
+
+#map { 
+  height: 400px; 
+  width: 100%; 
+  border-radius: 10px; 
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* 3. Button pulse + glow animation */
+nav a, .adopt-btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+nav a::before, .adopt-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+nav a:hover::before, .adopt-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+nav a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+}
+/* 5. Gradient text animation for headings */
+h1, h2 {
+  background: linear-gradient(90deg, #ff6b9d, #c44569, #f8b500, #ff6b9d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* 4. Floating animation for hero images */
+@keyframes float {
+ 0%, 100% { transform: translateY(0px); }
+ 50% { transform: translateY(-20px); }
+}
+
+.hero img {
+  animation: float 4s ease-in-out infinite;
+}
+/* ===== MODERN HEADER - REPLACES RED BOX ===== */
+header {
+  background: linear-gradient(135deg, #f74ba7 0%, #f74da8 100%) !important; /* purple gradient */
+  padding: 25px 20px !important;
+  border-radius: 0 0 25px 25px !important; /* rounded bottom corners only */
+  box-shadow: 0 8px 25px rgba(91, 75, 247, 0.3) !important; /* soft shadow */
+  margin-bottom: 40px !important;
+}
+
+/* Title text */
+header h1, header .site-title {
+  color: white !important;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2); /* makes text pop */
+}
+
+/* Nav links - keep same positions */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease; /* smooth hover */
+}
+
+/* Pink hover from last request */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-3px); /* lifts up slightly */
+}
+
+/* Active page pill */
+nav a.active {
+  background: white !important;
+  color: #5b4bf7 !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+/* ===== PINK HEADER  ===== */
+header {
+  background: linear-gradient(180deg, #d81b60 0%, #e91e63 50%, #f06292 100%) !important; /* pink gradient */
+  padding: 30px 20px 20px !important;
+  text-align: center;
+  border-bottom: 4px solid #ffd700 !important; /* gold bottom line like screenshot */
+  box-shadow: 0 8px 25px rgba(233, 30, 99, 0.4);
+  margin-bottom: 40px !important;
+  border-radius: 20px 20px 0 0 !important; /* rounded top corners like your pink screenshot */
+}
+
+/* Main title - Gold text */
+header h1, header .site-title {
+  color: #ffd700 !important; /* gold/yellow text */
+  font-family: Georgia, 'Times New Roman', serif !important; /* serif font like golf site */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+/* Subtitle line */
+header::after {
+  content: "EST.2024 — BENONI'S PREMIER ANIMAL RESCUE";
+  display: block;
+  color: white !important;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  margin-top: 5px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+/* Nav links bar - red strip  */
+nav {
+  margin-top: 20px;
+  background: rgba(211, 47, 47, 0.9) !important; /* red strip background */
+  padding: 12px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: white !important; /* white text on red */
+  text-decoration: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+/* Pink hover effect */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.25) !important;
+  transform: translateY(-2px);
+}
+
+/* Active page pill */
+nav a.active {
+  background: #ffd700 !important; /* gold pill */
+  color: #d81b60 !important; /* pink text */
+  font-weight: bold;
+}
+
+/* ===== PRO PINK HEADER WITH ANIMATED COLORS ===== */
+header {
+  background: linear-gradient(135deg, #c2185b 0%, #e91e63 50%, #f06292 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientShift 8s ease infinite; /* visible color animation */
+  padding: 35px 20px 25px !important;
+  text-align: center;
+  border-bottom: 4px solid #ffc107 !important; /* gold line */
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.35);
+  border-radius: 20px 20px 0 0 !important;
+  margin-bottom: 50px !important;
+}
+
+/* ANIMATION: Gradient moves slowly */
+@keyframes gradientShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
+
+/* Title - Gold with glow animation */
+header h1, header .site-title {
+  color: #ffd700 !important;
+  font-family: Georgia, serif !important;
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  letter-spacing: 2px;
+  animation: goldGlow 3s ease-in-out infinite alternate; /* visible glow */
+}
+
+@keyframes goldGlow {
+  from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.9), 0 0 30px rgba(255, 215, 0, 0.6); }
+}
+
+/* Subtitle */
+header::after {
+  content: "EST.2024 — BENONI'S PREMIER ANIMAL RESCUE";
+  display: block;
+  color: rgba(255,255,255,0.95) !important;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+/* Nav bar - red strip */
+nav {
+  margin-top: 25px;
+  background: linear-gradient(90deg, #b71c1c, #d32f2f, #b71c1c) !important;
+  background-size: 200% 100% !important;
+  animation: redSlide 6s linear infinite; /* red strip moves */
+  padding: 14px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+@keyframes redSlide {
+ 0% { background-position: 0% 0%; }
+ 100% { background-position: 200% 0%; }
+}
+
+nav a {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+}
+
+/* Hover: pink pill lifts up */
+nav a:hover {
+  background: rgba(255, 105, 180, 0.9) !important; /* hot pink */
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 105, 180, 0.4);
+}
+
+/* Active page: gold pill pulses */
+nav a.active {
+  background: #ffd700 !important;
+  color: #c2185b !important;
+  font-weight: bold;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+ 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+ 50% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+}
+
+/* ===== KILL SIDE GAPS + MAKE HEADER FULL WIDTH ===== */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden; /* prevents side scroll */
+}
+
+header {
+  width: 100vw !important; /* 100% of viewport width */
+  margin-left: calc(-50vw + 50%) !important; /* pulls it to left edge */
+  margin-right: calc(-50vw + 50%) !important; /* pulls it to right edge */
+  border-radius: 0 !important; /* remove rounded corners so it touches edges */
+  box-sizing: border-box;
+  padding: 35px 20px 25px !important;
+}
+
+/* Pink header for all pages */
+.site-header {
+  background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+}
+
+.site-header h1 {
+  margin: 0 0 15px 0;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.main-nav a.active {
+  background: rgba(255,255,255,0.3);
+}
+header::after {
+  content: "Rescuing Hearts, One Paw at a Time Since 2024";
+  display: block;
+  color: rgba(255,255,255,0.95) !important;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-top: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+
+header::after {
+  content: "Rescuing Hearts, One Paw at a Time Since 2024";
+  display: block;
+  color: rgba(255,255,255,0.95) !important;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  margin-top: 8px;
+  font-family: Arial, sans-serif;
+  font-weight: 500;
+}
+/* ===== CONSISTENT PINK HEADER FOR ALL PAGES ===== */
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.site-header {
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  background: linear-gradient(135deg, #c2185b 0%, #e91e63 50%, #f06292 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientShift 8s ease infinite;
+  padding: 35px 20px 25px !important;
+  text-align: center;
+  border-bottom: 4px solid #ffd700 !important;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.35);
+  border-radius: 0 !important;
+  margin-bottom: 40px !important;
+}
+
+@keyframes gradientShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
+
+.site-header h1 {
+  color: #ffd700 !important;
+  font-family: Georgia, serif !important;
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  letter-spacing: 2px;
+  animation: goldGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+  from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.9); }
+}
+
+.site-header::after {
+  content: "Rescuing Hearts, One Paw at a Time Since 2024";
+  display: block;
+  color: #ffd700 !important;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.main-nav {
+  margin-top: 25px;
+  background: rgba(194, 24, 91, 0.9) !important;
+  padding: 14px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.main-nav a:hover {
+  background: #ffd700 !important;
+  color: #c2185b !important;
+  transform: translateY(-3px);
+}
+
+.main-nav a.active {
+  background: #ffd700 !important;
+  color: #c2185b !important;
+  font-weight: bold;
+}
+
+/* ===== UNIFIED PINK + GOLD HEADER FOR ALL 5 PAGES ===== */
+html, body { margin: 0 !important; padding: 0 !important; width: 100%; overflow-x: hidden; }
+
+.site-header {
+  width: 100vw !important;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  background: linear-gradient(135deg, #c2185b 0%, #e91e63 50%, #f06292 100%) !important;
+  background-size: 200% 200% !important;
+  animation: gradientShift 8s ease infinite;
+  padding: 35px 20px 25px !important;
+  text-align: center;
+  border-bottom: 4px solid #ffd700 !important;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.35);
+  margin-bottom: 40px !important;
+}
+
+@keyframes gradientShift {
+ 0% { background-position: 0% 50%; }
+ 50% { background-position: 100% 50%; }
+ 100% { background-position: 0% 50%; }
+}
+
+.site-header h1 {
+  color: #ffd700 !important;
+  font-family: Georgia, serif !important;
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin: 0 0 12px 0;
+  letter-spacing: 2px;
+  animation: goldGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes goldGlow {
+  from { text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+  to { text-shadow: 0 0 20px rgba(255, 215, 0, 0.9); }
+}
+
+.site-header::after {
+  content: "Rescuing Hearts, One Paw at a Time Since 2024";
+  display: block;
+  color: #ffd700 !important;
+  font-size: 1.1rem;
+  letter-spacing: 1.5px;
+  margin-top: 10px;
+  font-weight: 600;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/* NAV - PINK STRIP, GOLD ACTIVE INSTEAD OF YELLOW */
+.main-nav {
+  margin-top: 25px;
+  background: rgba(194, 24, 91, 0.9) !important;
+  padding: 14px 0;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white !important;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background: transparent !important;
+}
+
+.main-nav a:hover {
+  background: #ffd700 !important;
+  color: #c2185b !important;
+  transform: translateY(-3px);
+}
+
+.main-nav a.active {
+  background: #ffd700 !important; /* gold instead of yellow */
+  color: #c2185b !important;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+/* PAGE TITLE PILL */
+.page-title { text-align: center; margin: 40px 0 50px 0; }
+.page-title h2 {
+  display: inline-block;
+  background: linear-gradient(135deg, #e91e63 0%, #f06292 100%);
+  color: #ffd700 !important;
+  padding: 18px 50px;
+  border-radius: 50px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border: 3px solid #ffd700;
+  text-transform: uppercase;
+}
+
+.site-header {
+  background: linear-gradient(135deg, #c2185b 0%, #e91e63 50%, #f06292 100%) !important;
+  animation: gradientShift 8s ease infinite;
+  border-bottom: 4px solid #ffd700 !important;
+}
+
+.brand-banner {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  background: linear-gradient(90deg, rgba(233, 30, 99, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  padding: 20px 30px;
+  border-left: 5px solid #ffd700;
+  margin: 30px 0;
+  border-radius: 0 12px 12px 0;
+}
+
+.brand-banner img {
+  width: 120px;
+  height: auto;
+}
+
+.brand-message h3 {
+  color: #e91e63 !important;
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.brand-message p {
+  color: #c2185b !important;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* HIDE DUPLICATE TAGLINE IN PINK BAR ON ENQUIRY PAGE */
+.pink-bar {
+  display: none !important;
+}
+/* REMOVE DUPLICATE TAGLINE - only keep it on first header */
+.site-header + .site-header::after {
+  display: none !important;
+}
+
+header { text-align: center; margin: 30px 0; }
+header h1 { color: #d63384; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 20px;
+}
+
+.animal-card {
+  background: white;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+.animal-card:hover { transform: translateY(-6px); }
+
+.animal-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.animal-card button {
+  background: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.animal-card button:hover { background: #d63384; }
+
+#searchBox {
+  display: block;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.bio { font-size: 14px; color: #555; }
+/* Nav button animation - matches Services */
+nav a, nav button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 8px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Hover effect for all buttons */
+nav a:hover, nav button:hover {
+  background: #ffeb3b;
+  color: #b71c1c;
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 235, 59, 0.4);
+}
+
+/* Active page - same as your Services yellow button */
+nav a.active, nav button.active {
+  background: #ffeb3b;
+  color: #b71c1c;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 235, 59, 0.3);
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+a[href^="tel:"], a[href^="https://www.google.com/maps"] {
+  color: #8B0000;
+  text-decoration: underline;
+  font-weight: 600;
+}
+a[href^="tel:"]:hover, a[href^="https://www.google.com/maps"]:hover {
+  color: #FF4500;
+}
+#map {
+  height: 400px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 20px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}

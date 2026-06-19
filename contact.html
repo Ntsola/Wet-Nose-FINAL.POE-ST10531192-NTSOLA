@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css_assets/mystyle.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <meta name="description" content="Contact Wetnose Animal Rescue Centre in Bronkhorstspruit. Find our phone, email, address, hours, map, and enquiry form. We respond within 24 hours. ">
+  <title>Contact Us | Wetnose Animal Rescue Centre Phone & Address</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+  <h1>Wet Nose Animal Rescue Centre</h1>
+  <nav class="main-nav">
+    <a href="index.html" class="active">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="contact.html" class="active">Contact Us</a>
+    <a href="enquiry.html" class="active">Enquiry</a>
+  </nav>
+</header>
+
+  <main class="container">
+    
+    <section>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. For adoptions, volunteering, or sponsorships, please use our <a href="enquiry.html">detailed enquiry form</a> for personal and detailed responses.</p>
+    </section>
+
+    <div class="Location-grid">
+      <div class="location-grid">
+  
+  <!-- LOCATION 1 -->
+  <div class="contact-info">
+    <h3>Location 1: Physical Address - Kennels & Cattery</h3>
+    <p>Wetnose Animal Rescue Centre<br>
+    Plot 123, R25 Road<br>
+    Bronkhorstspruit, 1020<br>
+    Gauteng, South Africa</p>
+  </div>
+
+  <!-- LOCATION 2 -->
+  <div class="contact-info">
+    <h3>Location 2: Postal Address - Donations & Correspondence</h3>
+    <p>Wetnose Animal Rescue Centre<br>
+    PO Box 456<br>
+    Bronkhorstspruit, 1020<br>
+    Gauteng, South Africa</p>
+    <p style="margin-top:15px; font-size:0.9rem;">
+      Please use this address for mailed donations, official correspondence, and sponsor documentation.
+    </p>
+  </div>
+
+</div>
+
+      </div>
+    </section>
+
+    <div class="contact-grid">
+
+      <!-- MAP -->
+<!-- MAP -->
+<h2>Visit Our Shelter</h2>
+<div id="map"></div>
+<p><b>Address:</b> <a href="https://www.google.com/maps/search/?api=1&query=75+R104,+Vaalbank-B,+Bronkhorstspruit,+1055" target="_blank">75 R104, Vaalbank-B, Bronkhorstspruit, 1055</a></p>
+<p><b>Contact:</b> <a href="tel:0826778084">082 677 8084</a></p>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Bronkhorstspruit, Gauteng coordinates
+const map = L.map('map').setView([-25.81015, 28.74248], 14);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+L.marker([-25.81015, 28.74248]).addTo(map);
+marker.bindPopup("<b>Rainbow Animal Shelter</b><br>75 R104, Vaalbank-B<br>Bronkhorstspruit, 1055<br>Open Mon-Sat 9am-4pm ").openPopup();
+</script>
+
+
+    <!-- CONTACT FORM -->
+<section class="form-container">
+  <h3>General Contact Form</h3>
+  <p>For quick questions about our centre. Response time: 2-3 working days.</p>
+  
+  <form id="contact-form" action="#" method="post" netlify novalidate>
+    
+    <label for="name">Your Full Name:</label>
+    <input type="text" id="name" name="name" required minlength="2">
+    
+    <label for="email">Your Email Address:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Your Phone Number:</label>
+    <input type="tel" id="phone" name="phone" placeholder="0821234567" required>
+    
+    <label for="subject">Subject:</label>
+    <input type="text" id="subject" name="subject" required minlength="5">
+    
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="5" required minlength="10" placeholder="Type your question here..."></textarea>
+    
+    <div style="margin:20px 0; display:flex; align-items:flex-start; gap:10px;">
+      <input type="checkbox" id="consent" name="consent" required style="margin-top:4px;">
+      <label for="consent" style="margin:0; font-weight:normal;">
+        I consent to Wetnose storing my details to respond to this enquiry.
+      </label>
+    </div>
+    
+    <button type="submit" class="btn-lg">Send Message</button>
+  </form>
+</section>
+
+    <section>
+    <!-- CONTACT DETAILS -->
+     <h2>Contact Details : </h2>
+         <section class="form-container">
+          
+      <div class="contact-grid">
+  
+  <div class="contact-card">
+    <h4>ALL ANIMAL CRUELTY COMPLAINTS</h4>
+    <p><strong>Phone:</strong> 082 677 8086</p>
+    <p><strong>Email:</strong> <a href="mailto:shelter@wetnose.co.za">shelter@wetnose.co.za</a></p>
+  </div>
+
+  <div class="contact-card">
+    <h4>INFORMATION</h4>
+    <p><strong>Phone:</strong> 068 098 8149</p>
+    <p><strong>Email:</strong> <a href="mailto:admin@wetnose.co.za">admin@wetnose.co.za</a></p>
+  </div>
+
+  <div class="contact-card">
+    <h4>CLINIC</h4>
+    <p><strong>Phone:</strong> 068 098 8149</p>
+    <p><strong>Email:</strong> <a href="mailto:vet@wetnose.co.za">vet@wetnose.co.za</a></p>
+  </div>
+
+  <div class="contact-card">
+    <h4>DOGS & CATS ADOPTIONS</h4>
+    <p><strong>Phone:</strong> 082 677 8084</p>
+  </div>
+
+  <div class="contact-card">
+    <h4>FARM ANIMALS & HORSES</h4>
+    <p><strong>Phone:</strong> 082 677 8086</p>
+    <p><strong>Email:</strong> <a href="mailto:animals@wetnose.co.za">animals@wetnose.co.za</a></p>
+  </div>
+
+  <div class="social-links">
+    <p><strong>Follow us:</strong></p>
+   <div class="social-icons">
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+    <img src="images/facebook logo.png">
+    <a href="https://Twitter.com" target="_blank"><i class="twitter"></i></a>
+    <img src="images/twitter logo.png">
+  <a href="https://Instagram,com" target="_blank"><i class="instagram"></i></a>
+  <img src="images/instagram logo.jpg">
+  <a href="https://Tik Tok.com" target="_blank"><i class="tik tok"></i></a>
+  <img src="images/tik tok logo.png">
+  <a href="https://Toutube" target="_blank"><i class="youtube"></i></a>
+  <img src="images/youtube logo.png">
+</div>
+      </a>
+    </div>
+  </div>
+</div>
+      
+
+<section>
+      <!-- VISITING HOURS -->
+      <div class="contact-info">
+        <h4>Public Visiting Hours</h4>
+        <ul style="list-style:none; padding:0;">
+          <li><strong>Saturday:</strong> 10:00 - 15:00</li>
+          <li><strong>Sunday:</strong> 10:00 - 15:00</li>
+          <li><strong>Weekdays:</strong> By appointment only</li>
+        </ul>
+      </div>
+</section>
+
+    
+
+  </main>
+
+  <footer>
+    <p>Wetnose Animal Rescue Centre | NPO 033-447 | Bronkhorstspruit, Pretoria</p>
+    <p>
+      <a href="contact.html">Contact Us</a> | 
+      <a href="enquiry.html">Enquire Now</a>
+    </p>
+  </footer>
+
+  <script src="JS/main.js" defer></script>
+</body>
+</html>
